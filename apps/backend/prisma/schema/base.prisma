@@ -1,0 +1,10 @@
+// apps/backend/prisma/schema/_provider.prisma
+
+datasource db {
+  provider = "mysql"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder"]
+}

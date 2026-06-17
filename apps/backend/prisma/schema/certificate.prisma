@@ -1,0 +1,13 @@
+model Certificate {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseTitle  String
+
+
+  tokenId      Int      @unique
+  txHash       String   @unique
+  contractAddr String
+
+  mintedAt     DateTime @default(now())
+}
